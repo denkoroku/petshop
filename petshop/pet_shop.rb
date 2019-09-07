@@ -1,5 +1,5 @@
-  #
-  #
+  # require 'pry'
+  # #
   # @customers = [
   #   {
   #     name: "Alice",
@@ -96,9 +96,39 @@
 # end
 
 
-def increase_pets_sold (shop, number_sold)
-   @pet_shop [:admin][:pets_sold] += number_sold
-   def pets_sold (number)
-     @pet_shop [:admin][:pets_sold]
-   end
+# def increase_pets_sold (shop, number_sold)
+#    @pet_shop [:admin][:pets_sold] += number_sold
+#    def pets_sold (number)
+#      @pet_shop [:admin][:pets_sold]
+#    end
+# end
+
+
+# def stock_count(shop)
+#   return @pet_shop [:pets].count
+# end
+
+
+# def pets_by_breed(shop, breed)
+#   pets = Array.new
+#   for individual_pets in @petshop[:pets]
+#   #  if individual_pet [:breed].keys == breed
+#       pets.push(@petshop[:pets][:breed])
+#   #  end
+#   end
+#     return pets
+#   end
+
+def pets_by_breed(shop, breed)
+  pets=[]
+    n=0
+    for pet in @pet_shop [:pets]
+      if @pet_shop [:pets][n][:breed] == breed
+        pets.push(@pet_shop [:pets][n][:breed])
+        n+=1
+      else
+        n+=1
+      end
+    end
+    return pets
 end
