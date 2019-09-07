@@ -77,15 +77,28 @@
 #  @pet_shop [:name]
 # end
 
+
 # def total_cash(shop)
 #   @pet_shop [:admin][:total_cash]
 # end
 
 
+# def add_or_remove_cash (shop, amount)
+#    @pet_shop [:admin][:total_cash] += amount
+#   def total_cash (shop_cash)
+#     @pet_shop [:admin][:total_cash]
+#   end
+# end
 
-def add_or_remove_cash (shop, amount)
-   @pet_shop [:admin][:total_cash] += amount
-  def total_cash (shop_cash)
-    @pet_shop [:admin][:total_cash]
-  end
+
+# def pets_sold (sold)
+#   @pet_shop [:admin][:pets_sold]
+# end
+
+
+def increase_pets_sold (shop, number_sold)
+   @pet_shop [:admin][:pets_sold] += number_sold
+   def pets_sold (number)
+     @pet_shop [:admin][:pets_sold]
+   end
 end
