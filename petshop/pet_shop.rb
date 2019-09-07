@@ -73,6 +73,12 @@
 
 
 ##################################################################
-def pet_shop_name(shop)
- @pet_shop [:name]
+# def pet_shop_name(shop)
+#  @pet_shop [:name]
+# end
+
+
+
+def total_cash(shop)
+  @pet_shop [:admin][:total_cash]
 end
