@@ -77,8 +77,15 @@
 #  @pet_shop [:name]
 # end
 
+# def total_cash(shop)
+#   @pet_shop [:admin][:total_cash]
+# end
 
 
-def total_cash(shop)
-  @pet_shop [:admin][:total_cash]
+
+def add_or_remove_cash (shop, amount)
+   @pet_shop [:admin][:total_cash] += amount
+  def total_cash (shop_cash)
+    @pet_shop [:admin][:total_cash]
+  end
 end
