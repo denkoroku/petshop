@@ -110,25 +110,41 @@
 
 
 # def pets_by_breed(shop, breed)
-#   pets = Array.new
-#   for individual_pets in @petshop[:pets]
-#   #  if individual_pet [:breed].keys == breed
-#       pets.push(@petshop[:pets][:breed])
-#   #  end
-#   end
+#   pets=[]
+#     n=0
+#     for pet in @pet_shop [:pets]
+#       if @pet_shop [:pets][n][:breed] == breed
+#         pets.push(@pet_shop [:pets][n][:breed])
+#         n+=1
+#       else
+#         n+=1
+#       end
+#     end
 #     return pets
-#   end
+# end
 
-def pets_by_breed(shop, breed)
-  pets=[]
-    n=0
-    for pet in @pet_shop [:pets]
-      if @pet_shop [:pets][n][:breed] == breed
-        pets.push(@pet_shop [:pets][n][:breed])
-        n+=1
-      else
-        n+=1
+# def find_pet_by_name (shop, name)
+#       n=0
+#       for dude in @pet_shop [:pets]
+#         if @pet_shop [:pets][n][:name] == name
+#           pet = Hash.new
+#           pet[:name] = @pet_shop [:pets][n][:name]
+#           n+=1
+#         else
+#           n+=1
+#         end
+#       end
+#     return pet
+# end
+#
+def remove_pet_by_name (shop, name)
+      n=0
+      for dude in @pet_shop [:pets]
+        if @pet_shop [:pets][n][:name] == name
+           @pet_shop [:pets].pop(n)
+          n+=1
+        else
+          n+=1
+        end
       end
-    end
-    return pets
 end

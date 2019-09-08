@@ -45,35 +45,29 @@
   name: "Camelot of Pets"
 }
 
-
-# pets=[]
-# n=0
-# for pet in @pet_shop [:pets]
-#  pets.push(@pet_shop [:pets][n][:breed])
-# n+=1
-# end
+# name= "Merlin"
 #
-# p pets
+#       n=0
+#       for dude in @pet_shop [:pets]
+#         if @pet_shop [:pets][n][:name] == name
+#            @pet_shop [:pets].fetch(n)
+#            n+=1
+#         end
+#       end
 
-# pets = []
-#
-# @pet_shop [:pets].each do |key, value|
-#   value.each do |key, value|
-#     pets << value
-#   end
-# end
-#
-# p pets
 
-breed = "fred"
-  pets=[]
+
+
+name= "Alfred"
+pet = Hash.new
     n=0
-    for pet in @pet_shop [:pets]
-      if @pet_shop [:pets][n][:breed] == breed
-        pets.push(@pet_shop [:pets][n][:breed])
-        n+=1
-      else
-        n+=1
-      end
-    end
-p pets.count
+    for dude in @pet_shop [:pets]
+            if @pet_shop [:pets][n][:name] == name
+              pet[:name] = @pet_shop [:pets][n][:name]
+              n+=1
+            else
+              n+=1
+            end
+          end
+p pet
+p pet[:name]
