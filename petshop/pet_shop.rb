@@ -155,3 +155,23 @@
 #     return @pet_shop [:pets].count
 #   end
 # end
+
+# def customer_cash (customer)
+#   return customer[:cash]
+# end
+
+# def remove_customer_cash (customer, amount)
+#   customer[:cash]= customer[:cash]-= amount
+# end
+
+def customer_pet_count(customer)
+  count = 0
+  for pet in customer[:pets]
+    count += 1
+  end
+return count
+end
+
+def add_pet_to_customer(customer, new_pet)
+  customer[:pets].push(new_pet)
+end

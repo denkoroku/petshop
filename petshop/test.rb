@@ -1,73 +1,29 @@
 
-@pet_shop = {
-  pets: [
-    {
-      name: "Sir Percy",
-      pet_type: :cat,
-      breed: "British Shorthair",
-      price: 500
-    },
-    {
-      name: "King Bagdemagus",
-      pet_type: :cat,
-      breed: "British Shorthair",
-      price: 500
-    },
-    {
-      name: "Sir Lancelot",
-      pet_type: :dog,
-      breed: "Pomsky",
-      price: 1000,
-    },
-    {
-      name: "Arthur",
-      pet_type: :dog,
-      breed: "Husky",
-      price: 900,
-    },
-    {
-      name: "Tristan",
-      pet_type: :dog,
-      breed: "Basset Hound",
-      price: 800,
-    },
-    {
-      name: "Merlin",
-      pet_type: :cat,
-      breed: "Egyptian Mau",
-      price: 1500,
-    }
-  ],
-  admin: {
-    total_cash: 1000,
-    pets_sold: 0,
+@customers = [
+  {
+    name: "Alice",
+    pets: ["cat"],
+    cash: 1000
   },
-  name: "Camelot of Pets"
-}
-
-# name= "Merlin"
-#
-#       n=0
-#       for dude in @pet_shop [:pets]
-#         if @pet_shop [:pets][n][:name] == name
-#            @pet_shop [:pets].fetch(n)
-#            n+=1
-#         end
-#       end
-
+  {
+    name: "Bob",
+    pets: [],
+    cash: 50
+  },
+  {
+    name: "Jack",
+    pets: [],
+    cash: 100
+  }
+]
 
 
-
-name= "Alfred"
-pet = Hash.new
-    n=0
-    for dude in @pet_shop [:pets]
-            if @pet_shop [:pets][n][:name] == name
-              pet[:name] = @pet_shop [:pets][n][:name]
-              n+=1
-            else
-              n+=1
-            end
-          end
-p pet
-p pet[:name]
+# total_pets = 0
+# for customers in @customers
+#   total_pets = total_pets + @customers[:pets].count
+# end
+n=0
+total=0
+for customer in @customers
+    p [:pets].count
+end
