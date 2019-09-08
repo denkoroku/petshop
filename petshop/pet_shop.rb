@@ -137,14 +137,21 @@
 #     return pet
 # end
 #
-def remove_pet_by_name (shop, name)
-      n=0
-      for dude in @pet_shop [:pets]
-        if @pet_shop [:pets][n][:name] == name
-           @pet_shop [:pets].pop(n)
-          n+=1
-        else
-          n+=1
-        end
-      end
-end
+# def remove_pet_by_name (shop, name)
+#       n=0
+#       for dude in @pet_shop [:pets]
+#         if @pet_shop [:pets][n][:name] == name
+#            @pet_shop [:pets].pop(n)
+#           n+=1
+#         else
+#           n+=1
+#         end
+#       end
+# end
+
+# def add_pet_to_stock (shop, new_pet)
+#   @pet_shop[:pets] << @new_pet
+#   def stock_count(shop)
+#     return @pet_shop [:pets].count
+#   end
+# end
