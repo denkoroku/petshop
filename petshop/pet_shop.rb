@@ -73,108 +73,108 @@
 
 
 ##################################################################
-# def pet_shop_name(shop)
-#  @pet_shop [:name]
-# end
+def pet_shop_name(shop)
+ @pet_shop [:name]
+end
 
 
-# def total_cash(shop)
-#   @pet_shop [:admin][:total_cash]
-# end
+def total_cash(shop)
+  @pet_shop [:admin][:total_cash]
+end
 
 
-# def add_or_remove_cash (shop, amount)
-#    @pet_shop [:admin][:total_cash] += amount
-#   def total_cash (shop_cash)
-#     @pet_shop [:admin][:total_cash]
-#   end
-# end
+def add_or_remove_cash (shop, amount)
+   @pet_shop [:admin][:total_cash] += amount
+  def total_cash (shop_cash)
+    @pet_shop [:admin][:total_cash]
+  end
+end
 
 
-# def pets_sold (sold)
-#   @pet_shop [:admin][:pets_sold]
-# end
+def pets_sold (sold)
+  @pet_shop [:admin][:pets_sold]
+end
 
 
-# def increase_pets_sold (shop, number_sold)
-#    @pet_shop [:admin][:pets_sold] += number_sold
-#    def pets_sold (number)
-#      @pet_shop [:admin][:pets_sold]
-#    end
-# end
+def increase_pets_sold (shop, number_sold)
+   @pet_shop [:admin][:pets_sold] += number_sold
+   def pets_sold (number)
+     @pet_shop [:admin][:pets_sold]
+   end
+end
 
 
-# def stock_count(shop)
-#   return @pet_shop [:pets].count
-# end
+def stock_count(shop)
+  return @pet_shop [:pets].count
+end
 
 
-# def pets_by_breed(shop, breed)
-#   pets=[]
-#     n=0
-#     for pet in @pet_shop [:pets]
-#       if @pet_shop [:pets][n][:breed] == breed
-#         pets.push(@pet_shop [:pets][n][:breed])
-#         n+=1
-#       else
-#         n+=1
-#       end
-#     end
-#     return pets
-# end
+def pets_by_breed(shop, breed)
+  pets=[]
+    n=0
+    for pet in @pet_shop [:pets]
+      if @pet_shop [:pets][n][:breed] == breed
+        pets.push(@pet_shop [:pets][n][:breed])
+        n+=1
+      else
+        n+=1
+      end
+    end
+    return pets
+end
 
-# def find_pet_by_name (shop, name)
-#       n=0
-#       for dude in @pet_shop [:pets]
-#         if @pet_shop [:pets][n][:name] == name
-#           pet = Hash.new
-#           pet[:name] = @pet_shop [:pets][n][:name]
-#           n+=1
-#         else
-#           n+=1
-#         end
-#       end
-#     return pet
-# end
-#
-# def remove_pet_by_name (shop, name)
-#       n=0
-#       for dude in @pet_shop [:pets]
-#         if @pet_shop [:pets][n][:name] == name
-#            @pet_shop [:pets].pop(n)
-#           n+=1
-#         else
-#           n+=1
-#         end
-#       end
-# end
+def find_pet_by_name (shop, name)
+      n=0
+      for dude in @pet_shop [:pets]
+        if @pet_shop [:pets][n][:name] == name
+          pet = Hash.new
+          pet[:name] = @pet_shop [:pets][n][:name]
+          n+=1
+        else
+          n+=1
+        end
+      end
+    return pet
+end
 
-# def add_pet_to_stock (shop, new_pet)
-#   @pet_shop[:pets] << @new_pet
-#   def stock_count(shop)
-#     return @pet_shop [:pets].count
-#   end
-# end
+def remove_pet_by_name (shop, name)
+      n=0
+      for dude in @pet_shop [:pets]
+        if @pet_shop [:pets][n][:name] == name
+           @pet_shop [:pets].pop(n)
+          n+=1
+        else
+          n+=1
+        end
+      end
+end
 
-# def customer_cash (customer)
-#   return customer[:cash]
-# end
+def add_pet_to_stock (shop, new_pet)
+  @pet_shop[:pets] << @new_pet
+  def stock_count(shop)
+    return @pet_shop [:pets].count
+  end
+end
 
-# def remove_customer_cash (customer, amount)
-#   customer[:cash]= customer[:cash]-= amount
-# end
+def customer_cash (customer)
+  return customer[:cash]
+end
 
-# def customer_pet_count(customer)
-#   count = 0
-#   for pet in customer[:pets]
-#     count += 1
-#   end
-# return count
-# end
-#
-# def add_pet_to_customer(customer, new_pet)
-#   customer[:pets].push(new_pet)
-# end
+def remove_customer_cash (customer, amount)
+  customer[:cash]= customer[:cash]-= amount
+end
+
+def customer_pet_count(customer)
+  count = 0
+  for pet in customer[:pets]
+    count += 1
+  end
+return count
+end
+
+def add_pet_to_customer(customer, new_pet)
+  customer[:pets].push(new_pet)
+end
 
 def customer_can_afford_pet(customer, new_pet)
   if customer[:cash] >= @new_pet[:price]
@@ -182,4 +182,15 @@ def customer_can_afford_pet(customer, new_pet)
   else
     return false
   end
+end
+
+def sell_pet_to_customer(shop, pet, customer)
+  if find_pet_by_name(pet).count>=1
+    if customer_can_afford_pet(customer, pet)=true
+      add_pet_to_customer(customer, pet)
+    else
+      puts "Customer can't afford pet"
+    end
+  else
+    puts "Pet not found"
 end
